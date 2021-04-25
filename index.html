@@ -1,0 +1,1246 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <title>My project</title>
+    <style>
+      #contactUs {
+        font-family: sans-serif;
+        height: 50px;
+
+        max-width: 100%;
+        background-color: #c2c2d6;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid white;
+        border-collapse: collapse;
+        text-align: center;
+        table-layout: fixed;
+        width: 100%;
+        font-family: cursive;
+      }
+      th,
+      td {
+        background-color: #c2c2d6;
+        padding: 10px 5px;
+        width: 25%;
+      }
+      #pdf {
+        color: black;
+        text-decoration: underline;
+        font-size: 15px;
+        font-family: cursive;
+      }
+    </style>
+  </head>
+  <body class="lighten-3" onload="readData()" style="background-color: #e0e0eb">
+    <!-- NAVBAR -->
+    <nav
+      class="z-depth-0 lighten-4"
+      style="
+        background-color: #c2c2d6;
+        height: 90px;
+        padding: 5px;
+        padding-bottom: 70px;
+      "
+    >
+      <div class="nav-wrapper navbar-fixed container">
+        <a href="index.html" class="brand-logo" class="responsive">
+          <img src="/images/Capture1.PNG" class="responsive" />
+        </a>
+        <ul
+          id="nav-mobile"
+          class="right hide-on-med-and-down"
+          style="padding-top: 9px"
+        >
+          <li class="logged-in" style="display: none">
+            <a
+              href="#"
+              class="black-text modal-trigger"
+              data-target="modal-account"
+              style="color: #47476b; font-family: monospace; font-weight: bold"
+              >ACCOUNT</a
+            >
+          </li>
+          <li class="admin">
+            <a
+              href="#"
+              class="black-text modal-trigger"
+              data-target="modal-create"
+              style="color: #47476b; font-family: monospace; font-weight: bold"
+              >ADD COLLEGE DATA</a
+            >
+          </li>
+          <li class="admin">
+            <a
+              href="#"
+              class="black-text modal-trigger"
+              data-target="modal-manage"
+              style="color: #47476b; font-family: monospace; font-weight: bold"
+              >MANAGE DATA</a
+            >
+          </li>
+          <li class="logged-in">
+            <a
+              href="#"
+              class="black-text modal-trigger"
+              data-target="modal-academics"
+              style="color: #47476b; font-family: monospace; font-weight: bold"
+              >ACADEMICS</a
+            >
+          </li>
+          <li class="logged-out">
+            <a
+              href="#"
+              class="black-text modal-trigger"
+              data-target="modal-login"
+              style="color: #47476b; font-family: monospace; font-weight: bold"
+              >LOG IN</a
+            >
+          </li>
+          <li class="logged-out">
+            <a
+              href="#"
+              class="black-text modal-trigger"
+              data-target="modal-signup"
+              style="color: #47476b; font-family: monospace; font-weight: bold"
+              >SIGN UP</a
+            >
+          </li>
+          <li class="logged-in">
+            <a
+              href="#"
+              class="black-text"
+              id="logout"
+              style="color: #47476b; font-family: monospace; font-weight: bold"
+              >LOGOUT</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="carousel">
+      <div class="carousel carousel-slider">
+        <a class="carousel-item" href="#"
+          ><img src="/images/1st.jpg" style="height: 550px"
+        /></a>
+        <a class="carousel-item" href="#"
+          ><img src="/images/2nd.jpg" style="height: 550px"
+        /></a>
+        <a class="carousel-item" href="#"
+          ><img src="/images/3rd.jpg" style="height: 550px"
+        /></a>
+      </div>
+    </div>
+
+    <!--table-->
+    <div
+      id="modal-academics"
+      class="modal"
+      style="height: 100%; width: 100%; background-color: #e0e0eb"
+    >
+      <div class="modal-content" style="width: max-content">
+        <!--sem1-->
+        <div class="container logged-in" style="margin-top: 5px">
+          <table style="width: 100%">
+            <tr>
+              <th
+                colspan="2"
+                style="
+                  background-color: #666699;
+                  color: white;
+                  text-align: center;
+                "
+              >
+                FY BSc.I.T (Semester 1)
+              </th>
+            </tr>
+            <tr>
+              <td
+                style="
+                  background-color: #666699;
+                  color: white;
+                  text-align: center;
+                "
+              >
+                Subject
+              </td>
+              <td style="background-color: #666699; color: white">
+                Links For Downloading
+              </td>
+            </tr>
+
+            <tr>
+              <td>Imperative Programming</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem1%2FC%20Programming.pdf?alt=media&token=66408fa8-b5da-4d4e-8653-1d21076cb297"
+                  >Imperative Programming Book</a
+                >
+                <br /><a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem1%2FCpaper.pdf?alt=media&token=fcbad6f1-2c86-4385-8106-5ec147dfc667"
+                  >Imperative Programming Paper & solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Operating System</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem1%2FOS.pdf?alt=media&token=67eec2cb-67ac-4981-8806-ba60381af435"
+                  >Operating System Book</a
+                >
+                <br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem1%2FOSpaper.pdf?alt=media&token=a442dc6f-8b29-4e83-9634-e71eab5b1473"
+                  >Operating System Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Communication Skills</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem1%2FCS.pdf?alt=media&token=a5eff373-2ea2-4841-9f28-8a42e3056106"
+                  >Communication Skills Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem1%2FCSpaper.pdf?alt=media&token=6800b649-3b3b-4339-8341-2a585ffd73a6"
+                  >Communication Skills Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Digital Electronics</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem1%2FDE.pdf?alt=media&token=c2a1260f-c4fd-403f-8e59-4e3bcc195525"
+                  >Digital Electronics Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem1%2FDEpaper.pdf?alt=media&token=34db9fb3-868f-4d1f-b7d9-7be547c57844"
+                  >Digital Electronics Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Discrete Mathematics</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem1%2FDM.pdf?alt=media&token=c0ff32d6-3021-458e-9331-c7e854f547fd"
+                  >Discrete Mathematics Skills Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem1%2FDMpaper.pdf?alt=media&token=0c557a24-5889-4c41-bd32-e4350c035840"
+                  >Discrete Mathematics Paper & Solution</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--sem1-->
+
+        <!--sem2-->
+        <div
+          class="container logged-in"
+          style="text-align: center; margin-top: 20px"
+        >
+          <table style="width: 100%">
+            <tr>
+              <th colspan="2" style="background-color: #666699; color: white">
+                FY BSc.I.T (Semester 2)
+              </th>
+            </tr>
+            <tr>
+              <td style="background-color: #666699; color: white">Subject</td>
+              <td style="background-color: #666699; color: white">
+                Links For Downloading
+              </td>
+            </tr>
+
+            <tr>
+              <td>Object Oriented Programming</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem2%2FC%2B%2B.pdf?alt=media&token=1c661b39-f4a5-4486-a5d3-6d0155c67d4f"
+                  >Object Oriented Programming Book</a
+                >
+                <br /><a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem2%2FC%2B%2Bpaper.pdf?alt=media&token=b8453cd2-efd3-4bff-afb7-c73ff79994f8"
+                  >Object Oriented Programming Paper & solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Web Programming</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem2%2Fweb.pdf?alt=media&token=b62c703a-618f-4434-9381-e56e96687f97"
+                  >Web Programming Book</a
+                >
+                <br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem2%2Fwebpaper.pdf?alt=media&token=8ce08292-4b19-49b0-b2aa-3065abecf294"
+                  >Web Programming Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Numerical and Statistical Methods</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem2%2FNSM.pdf?alt=media&token=d2bd9f3a-0bb2-483d-8937-118e464ad410"
+                  >Numerical and Statistical Methods Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem2%2FNSMpaper.pdf?alt=media&token=758bd969-1677-44ca-adec-1bb48cdf1631"
+                  >Numerical and Statistical Methods Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Green Computing</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem2%2FGC.pdf?alt=media&token=0e0156f5-cab8-4b12-8cae-1a3b550c7d19"
+                  >Green Computing Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem2%2FGCpaper.pdf?alt=media&token=16e6d6bb-7de1-46c5-894c-0bedc61b20cc"
+                  >Green Computing Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Microprocessor Architecture</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem2%2FMA.pdf?alt=media&token=92415ba8-75dd-48cd-adf9-173f2c309972"
+                  >Microprocessor Architecture Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/FYsem2%2FMApaper.pdf?alt=media&token=c351944f-6f80-4e60-840d-c5646ab0d14f"
+                >
+                  Paper & Solution</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--sem2-->
+        <!--sem3-->
+        <div
+          class="container logged-in"
+          style="text-align: center; margin-top: 20px"
+        >
+          <table style="width: 100%">
+            <tr>
+              <th colspan="2" style="background-color: #666699; color: white">
+                SY BSc.I.T (Semester 3)
+              </th>
+            </tr>
+            <tr>
+              <td style="background-color: #666699; color: white">Subject</td>
+              <td style="background-color: #666699; color: white">
+                Links For Downloading
+              </td>
+            </tr>
+
+            <tr>
+              <td>Python Programming</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem3%2Fpython.pdf?alt=media&token=ade1718a-8f27-43e1-aceb-17ecc39bd319"
+                  >Python Programming Book</a
+                >
+                <br /><a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem3%2Fpythonpaper.pdf?alt=media&token=73be6f68-200e-4f1a-b6cc-96af34f482b4"
+                  >Python Programming Paper & solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Data Structures</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem3%2FDS.pdf?alt=media&token=bbf6305d-31f4-4b75-8c60-2e13a6f992ad"
+                  >Data Structures Book</a
+                >
+                <br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem3%2FDSpaper.pdf?alt=media&token=9ccfbf4a-e39d-41fa-ae33-e65f46dba036"
+                  >Data Structures Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Applied Mathematics</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem3%2FAM.pdf?alt=media&token=6a1b976a-cb30-4d25-9ec0-07dc525de9e5"
+                  >Applied Mathematics Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem3%2FAMpaper.pdf?alt=media&token=2d8fc498-cd71-4b4f-abab-bcb0492f6e15"
+                  >Applied Mathematics Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Computer Network</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem3%2FCN.pdf?alt=media&token=859144e9-1a65-47e8-b482-3eb2e3073221"
+                  >Computer Network Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem3%2FCNpaper.pdf?alt=media&token=421321e4-7ce1-4b87-835f-edbb3f6de5cd"
+                  >Computer Network Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Database Management System</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem3%2FDBMS.pdf?alt=media&token=31e6b9d9-d768-4752-b1a1-74da88552686"
+                  >Database Management System Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem3%2FDBMSpaper.pdf?alt=media&token=d40dc88f-f562-4e87-9190-22a14beba6ac"
+                  >Database Management System & Solution</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--sem3-->
+        <!--sem4-->
+        <div
+          class="container logged-in"
+          style="text-align: center; margin-top: 20px"
+        >
+          <table style="width: 100%">
+            <tr>
+              <th colspan="2" style="background-color: #666699; color: white">
+                SY BSc.I.T (Semester 4)
+              </th>
+            </tr>
+            <tr>
+              <td style="background-color: #666699; color: white">Subject</td>
+              <td style="background-color: #666699; color: white">
+                Links For Downloading
+              </td>
+            </tr>
+
+            <tr>
+              <td>Core Java</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem4%2Fjava.pdf?alt=media&token=96855b06-946e-4007-bcc5-99a0f4c42c4a"
+                  >Core Java Book</a
+                >
+                <br /><a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem4%2Fjavapaper.pdf?alt=media&token=4c198b73-e1a6-461c-8672-3a24834b0ac3"
+                  >Core Java Paper & solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Introduction to Embedded Systems</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem4%2FES.pdf?alt=media&token=213d7cfb-d747-40af-9fe0-d7d988db9270"
+                  >Introduction to Embedded Systems Book</a
+                >
+                <br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem4%2FESpaper.pdf?alt=media&token=ebcbdb3c-29e1-4807-82fd-c190ca03adac"
+                  >Introduction to Embedded Systems Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Computer Oriented Statistical Techniques</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem4%2FCOST.pdf?alt=media&token=a00890bd-69e5-4fcd-8667-0b1211f8804e"
+                  >Computer Oriented Statistical Techniques Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem4%2FCOSTpaper.pdf?alt=media&token=1d5ad63f-8808-4a19-8a4a-fa2f813e4dd6"
+                  >Computer Oriented Statistical Techniques Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Software Engineering</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem4%2FSE.pdf?alt=media&token=eefd7182-8114-4818-924d-9f8a541f15d8"
+                  >Software Engineering Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem4%2FSEpaper.pdf?alt=media&token=7a34d91d-d4a2-4a90-abb6-6a2f48cf6db3"
+                  >Software Engineering Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Computer Graphics and Animation</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem4%2FCGA.pdf?alt=media&token=0f7f8276-6624-46e4-a84f-df35aae80882"
+                  >Computer Graphics and Animation Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/SYsem4%2FCGApaper.pdf?alt=media&token=c0cc5f9f-ebf8-48e6-a35d-f9f8dc2cfc10"
+                  >Computer Graphics and Animation Paper & Solution</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--sem4-->
+        <!--sem5-->
+        <div
+          class="container logged-in"
+          style="text-align: center; margin-top: 20px"
+        >
+          <table style="width: 100%">
+            <tr>
+              <th colspan="2" style="background-color: #666699; color: white">
+                TY BSc.I.T (Semester 5)
+              </th>
+            </tr>
+            <tr>
+              <td style="background-color: #666699; color: white">Subject</td>
+              <td style="background-color: #666699; color: white">
+                Links For Downloading
+              </td>
+            </tr>
+
+            <tr>
+              <td>Software Project Management</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem5%2FSPM.pdf?alt=media&token=71d6e7d3-9f52-4564-822d-9146714da591"
+                  >Software Project Management Book</a
+                >
+                <br /><a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem5%2FSPMpaper.pdf?alt=media&token=e5e59835-0168-4d33-ac32-3e5d2f2d495e"
+                  >Software Project Management Paper & solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Internet of Things</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem5%2FIOT.pdf?alt=media&token=d1ead18b-51c6-481c-a998-44a88a3936f4"
+                  >Internet of Things Book</a
+                >
+                <br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem5%2FIOTpaper.pdf?alt=media&token=f3a7347c-b425-4ade-b7d2-660638d01e35"
+                  >Internet of Things Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Advanced Web Programming</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem5%2FAWP.pdf?alt=media&token=3a1729af-bc9b-4cf6-88e4-ed11ff174104"
+                  >Advanced Web Programming Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem5%2FAWPpaper.pdf?alt=media&token=aae8cde1-d8c9-4a14-bdab-4bb3553034d9"
+                  >Advanced Web Programming Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Artificial Intelligence</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem5%2FAI.pdf?alt=media&token=917b999a-744a-4f60-82c9-e01ac2f550c8"
+                  >Artificial Intelligence Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem5%2FAIpaper.pdf?alt=media&token=66b4fea0-676a-4db2-9adc-2ba1c6464af4"
+                  >Artificial Intelligence Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Next Generation Technologies</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem5%2FNGT.pdf?alt=media&token=c05d806e-834a-4b61-ba54-4df567df1ccd"
+                  >Next Generation Technologies Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem5%2FNGTpaper.pdf?alt=media&token=d36fd7bb-295c-4fb3-9bdc-8dca006f2a1e"
+                  >Next Generation Technologies Paper & Solution</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--sem5-->
+        <!--sem6-->
+        <div
+          class="container logged-in"
+          style="text-align: center; margin-top: 20px"
+        >
+          <table style="width: 100%">
+            <tr>
+              <th colspan="2" style="background-color: #666699; color: white">
+                TY BSc.I.T (Semester 6)
+              </th>
+            </tr>
+            <tr>
+              <td style="background-color: #666699; color: white">Subject</td>
+              <td style="background-color: #666699; color: white">
+                Links For Downloading
+              </td>
+            </tr>
+
+            <tr>
+              <td>Software Quality Assurance</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem6%2FSQA.pdf?alt=media&token=0a375531-0fe1-4df1-8ea4-f2bbf85542f4"
+                  >Software Quality Assurance Book</a
+                >
+                <br /><a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem6%2FSQApaper.pdf?alt=media&token=a4f4ad83-adad-46c3-bde8-6e62c7f01d28"
+                  >Software Quality Assurance Paper & solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Security in Computing</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem6%2FSIC.pdf?alt=media&token=93b5b0ed-f83a-4640-a262-a9d27a50e4e9"
+                  >Security in Computing Book</a
+                >
+                <br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem6%2FSICpaper.pdf?alt=media&token=73a3f339-fc82-4db3-a1b8-310f3c17e32f"
+                  >Security in Computing Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Business Intelligence</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem6%2FBI.pdf?alt=media&token=d681ae13-f35f-42b3-b514-7e92fab3f18f"
+                  >Business Intelligence Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem6%2FBIpaper.pdf?alt=media&token=09cd85d2-a1c9-4b8a-9633-f642c2780d53"
+                  >Business Intelligence Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Enterprise Networking</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem6%2FEN.pdf?alt=media&token=ca722a20-8e1b-4f88-98e8-69762ecf172f"
+                  >Enterprise Networking Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem6%2FENpaper.pdf?alt=media&token=748517c9-24bd-4ae8-8cc2-b3352cacc218"
+                  >Enterprise Networking Paper & Solution</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>IT Services Management</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem6%2FITSM.pdf?alt=media&token=69ab8a4f-ec73-4025-b0b0-4f32a6e7b00a"
+                  >IT Services Management Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/TYsem6%2FITSMpaper.pdf?alt=media&token=23adc458-4142-4d26-a898-024e3918af91"
+                  >IT Services Management Paper & Solution</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--sem6-->
+
+        <!--mscit-->
+        <div
+          class="container logged-in"
+          style="text-align: center; margin-top: 20px"
+        >
+          <table style="width: 100%">
+            <tr>
+              <th colspan="2" style="background-color: #666699; color: white">
+                MSc.I.T
+              </th>
+            </tr>
+            <tr>
+              <td style="background-color: #666699; color: white">Subject</td>
+              <td style="background-color: #666699; color: white">
+                Links For Downloading
+              </td>
+            </tr>
+
+            <tr>
+              <td>Cloud Computing</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/mscITsem1%2FCloud%20Computing.pdf?alt=media&token=c7072914-6dd8-44cd-b57a-852b9d03ee5d"
+                  >Cloud Computing Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/mscITsem1%2Fcloud%20computing%20paper.pdf?alt=media&token=79ee4fe1-80df-4c6c-8da3-952af9be287a"
+                  >Cloud Computing Paper</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Data Science</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/mscITsem1%2FData%20Science.pdf?alt=media&token=68156d3e-9ab1-46d9-8c84-7fe832a0e97a"
+                  >Data Science Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/mscITsem1%2Fdata%20science%20paper.pdf?alt=media&token=c2fcda25-39fd-4315-8c50-ac5239176dd8"
+                  >Data Science Paper</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Research in Computing</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/mscITsem1%2Fresearch%20in%20computing.pdf?alt=media&token=bfb7dec4-3830-4b7f-b2d5-fe82ef3e3e4b"
+                  >Research in Computing Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/mscITsem1%2Fresearch%20in%20computing%20paper.pdf?alt=media&token=088d48bb-ccd5-4652-bab7-3b2a1aa6a33e"
+                  >Research in Computing Paper</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Soft Computing Techniques</td>
+              <td>
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/mscITsem1%2Fsoft%20computing.pdf?alt=media&token=492579b0-29b7-4eac-97f1-d8c93f4e42a8"
+                  >Soft Computing Techniques Book</a
+                ><br />
+                <a
+                  id="pdf"
+                  href="https://firebasestorage.googleapis.com/v0/b/it-academic-forum-7b334.appspot.com/o/mscITsem1%2Fsoft%20computing%20techniques%20paper.pdf?alt=media&token=40eb4c3b-6437-42f3-b4f0-3c9f55a77317"
+                  >Soft Computing Techniques Paper</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!--mscit-->
+
+        <!--table-->
+      </div>
+    </div>
+
+    <!-- SIGN UP MODAL -->
+    <div
+      id="modal-signup"
+      class="modal"
+      style="background: #e0e0eb; border-radius: 40px; width: 500px"
+    >
+      <div class="modal-content">
+        <h4 style="text-align: center; font-family: cursive">Sign up</h4>
+        <br />
+        <form id="signup-form">
+          <div class="input-field">
+            <input
+              type="email"
+              id="signup-email"
+              required
+              style="font-family: cursive"
+            />
+            <label for="signup-email">Email address</label>
+          </div>
+          <div class="input-field">
+            <input
+              type="password"
+              id="signup-password"
+              required
+              style="font-family: cursive"
+            />
+            <label for="signup-password">Choose password</label>
+          </div>
+          <button
+            class="btn darken-2 z-depth-0"
+            style="background: #666699; margin-left: 40%; border-radius: 10px"
+          >
+            Sign up
+          </button>
+          <p class="error pink-text center-align"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- MANAGE DATA MODAL -->
+    <div id="modal-manage" class="modal">
+      <div class="modal-content">
+        <ul
+          class="collapsible z-depth-0"
+          id="manageData"
+          style="border: none"
+        ></ul>
+      </div>
+    </div>
+
+    <!-- ACCOUNT MODAL -->
+    <div id="modal-account" class="modal" style="background-color: #e0e0eb">
+      <div class="modal-content center-align">
+        <h4 style="font-family: sans-serif; color: #47476b">Account details</h4>
+        <br />
+        <div class="account-details"></div>
+      </div>
+    </div>
+
+    <!-- LOGIN MODAL -->
+    <div
+      id="modal-login"
+      class="modal"
+      style="background: #e0e0eb; border-radius: 40px; width: 500px"
+    >
+      <div class="modal-content">
+        <h4 style="text-align: center; font-family: cursive">Login</h4>
+        <br />
+        <form id="login-form">
+          <div class="input-field">
+            <input
+              type="email"
+              id="login-email"
+              required
+              style="font-family: cursive"
+            />
+            <label for="login-email">Email address</label>
+          </div>
+          <div class="input-field">
+            <input
+              type="password"
+              id="login-password"
+              required
+              style="font-family: cursive"
+            />
+            <label for="login-password">Your password</label>
+          </div>
+          <button
+            class="btn darken-2 z-depth-0"
+            style="background: #666699; margin-left: 40%; border-radius: 10px"
+          >
+            Login
+          </button>
+          <p class="error pink-text center-align"></p>
+        </form>
+      </div>
+    </div>
+
+    <!--ADD COLLEGE INFO MODAL -->
+    <div id="modal-create" class="modal" style="background-color: #e0e0eb">
+      <div class="modal-content">
+        <h4
+          style="
+            font-family: sans-serif;
+            text-align: center;
+            font-weight: bold;
+            color: #47476b;
+          "
+        >
+          Add College Data
+        </h4>
+        <br />
+        <form id="create-form">
+          <h5>College Information</h5>
+          <div class="input-field">
+            <input type="number" id="collegeCode" required />
+            <label for="collegeCode">COLLEGE CODE</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="collegeName" required />
+            <label for="collegeName">COLLEGE NAME</label>
+          </div>
+          <h5>Information about Principal</h5>
+          <div class="input-field">
+            <input type="text" id="principalName" required />
+            <label for="principalName">NAME</label>
+          </div>
+          <div class="input-field">
+            <input type="number" id="principalPhone" required />
+            <label for="principalPhone">PHONE NUMBER</label>
+          </div>
+          <div class="input-field">
+            <input type="email" id="principalEmail" required />
+            <label for="principalEmail">EMAIL</label>
+          </div>
+          <h5>information about Head of the IT Department</h5>
+          <div class="input-field">
+            <input type="text" id="hodName" required />
+            <label for="hodName">NAME</label>
+          </div>
+          <div class="input-field">
+            <input type="number" id="hodPhone" required />
+            <label for="hodPhone">PHONE NUMBER</label>
+          </div>
+          <div class="input-field">
+            <input type="email" id="hodEmail" required />
+            <label for="hodEmail">EMAIL ID</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="hodQualification" required />
+            <label for="hodQualification">EDUCATIONAL QUALIFICATION</label>
+          </div>
+          <div class="input-field">
+            <input type="number" id="hodExperienceYears" required />
+            <label for="hodExperienceYears"
+              >YEARS OF EXPERIENCE IN TEACHING</label
+            >
+          </div>
+          <h5>Information about teachers in BSc IT department</h5>
+          <h6>Teacher 1</h6>
+          <div class="input-field">
+            <input type="text" id="lecturer1Name" required />
+            <label for="lecturer1Name">NAME</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer1Address" required />
+            <label for="lecturer1Address">ADDRESS</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer1Qualification" required />
+            <label for="lecturer1Qualification"
+              >EDUCATIONAL QUALIFICATION</label
+            >
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer1Subjects" required />
+            <label for="lecturer1Subjects"
+              >SUBJECTS THEY TEACH EX:- C++,PYTHON,...etc</label
+            >
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer1WorkExp" required />
+            <label for="lecturer1WorkExp"
+              >YEARS OF EXPERIENCE IN TEACHING</label
+            >
+          </div>
+          <h6>Teacher 2</h6>
+          <div class="input-field">
+            <input type="text" id="lecturer2Name" required />
+            <label for="lecturer2Name">NAME</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer2Address" required />
+            <label for="lecturer2Address">ADDRESS</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer2Qualification" required />
+            <label for="lecturer2Qualification"
+              >EDUCATIONAL QUALIFICATION</label
+            >
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer2Subjects" required />
+            <label for="lecturer2Subjects"
+              >SUBJECTS THEY TEACH EX:- C++,PYTHON,...etc</label
+            >
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer2WorkExp" required />
+            <label for="lecturer2WorkExp"
+              >YEARS OF EXPERIENCE IN TEACHING</label
+            >
+          </div>
+          <h6>Teacher 3</h6>
+          <div class="input-field">
+            <input type="text" id="lecturer3Name" required />
+            <label for="lecturer3Name">NAME</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer3Address" required />
+            <label for="lecturer3Address">ADDRESS</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer3Qualification" required />
+            <label for="lecturer3Qualification"
+              >EDUCATIONAL QUALIFICATION</label
+            >
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer3Subjects" required />
+            <label for="lecturer3Subjects"
+              >SUBJECTS THEY TEACH EX:- C++,PYTHON,...etc</label
+            >
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer3WorkExp" required />
+            <label for="lecturer3WorkExp"
+              >YEARS OF EXPERIENCE IN TEACHING</label
+            >
+          </div>
+          <h6>Teacher 4</h6>
+          <div class="input-field">
+            <input type="text" id="lecturer4Name" required />
+            <label for="lecturer4Name">NAME</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer4Address" required />
+            <label for="lecturer4Address">ADDRESS</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer4Qualification" required />
+            <label for="lecturer4Qualification"
+              >EDUCATIONAL QUALIFICATION</label
+            >
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer4Subjects" required />
+            <label for="lecturer4Subjects"
+              >SUBJECTS THEY TEACH EX:- C++,PYTHON,...etc</label
+            >
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer4WorkExp" required />
+            <label for="lecturer4WorkExp"
+              >YEARS OF EXPERIENCE IN TEACHING</label
+            >
+          </div>
+          <h6>Teacher 5</h6>
+          <div class="input-field">
+            <input type="text" id="lecturer5Name" required />
+            <label for="lecturer5Name">NAME</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer5Address" required />
+            <label for="lecturer5Address">ADDRESS</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer5Qualification" required />
+            <label for="lecturer5Qualification">
+              EDUCATIONAL QAULIFICATION</label
+            >
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer5Subjects" required />
+            <label for="lecturer5Subjects"
+              >SUBJECTS THEY TEACH EX:- C++,PYTHON,...etc</label
+            >
+          </div>
+          <div class="input-field">
+            <input type="text" id="lecturer5WorkExp" required />
+            <label for="lecturer5WorkExp"
+              >YEARS OF EXPERIENCE IN TEACHING</label
+            >
+          </div>
+
+          <button
+            class="btn darken-2 z-depth-0"
+            style="
+              background-color: #666699;
+              margin-left: 47%;
+              border-radius: 10px;
+              text-align: center;
+            "
+          >
+            Add
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!--  COLLEGE INFO -->
+    <div class="container admin" style="margin-top: 40px">
+      <ul
+        class="collapsible z-depth-0 lecturers"
+        id="colleges"
+        style="border: none"
+      ></ul>
+    </div>
+    <!-- ADMIN ACTIONS -->
+    <form
+      class="center-align admin-actions admin"
+      style="margin: 40px auto; max-width: 300px; display: none"
+    >
+      <input type="email" placeholder="User email" id="admin-email" required />
+      <button
+        class="btn-small darken-2 z-depth-0"
+        style="background-color: #5c5c8a"
+      >
+        Make admin
+      </button>
+    </form>
+    <!--aboutUS-->
+    <div class="container center-align" id="AboutUs">
+      <h3 style="font-family: sans-serif"><span>About Us</span></h3>
+
+      <p style="font-family: 'Courier New', Courier, monospace">
+ This website gives a convenient way to students  of BSc IT and MSc IT for
+        getting the books and code according to the syllabus of Mulund
+        university and previous year’s paper with solution it will reduce their
+        effort of searching on many websites and still not be able understand
+        from which book they should be studying. Here admin can store the data
+        about teachers present in his/her college. Data like educational
+        qualifications and how many years’ experience they are having and in
+        which college they are teaching and which subject they are teaching.
+        This way this website will keep the records of all college’s IT teachers
+        and their experience and how many teachers are there to teach every
+        subject
+      </p>
+    </div>
+    <!--aboutUS-->
+    <!--aboutUs-->
+    <div id="contactUs">
+      <p style="text-align: center; font-family: monospace; font-weight: bold">
+        Contact Us:-
+        <img
+          src="images/gmail.png"
+          height="30px"
+          width="20px"
+          style="padding-top: 10px; position: relative; top: 5px"
+          alt="gmail"
+        />
+        itacademicforum25@gmail.com
+      </p>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-functions.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyD8goEZ42mHzkv0sagttbfLJpliorDmaoA",
+        authDomain: "itacademic-8a6d3.firebaseapp.com",
+        projectId: "itacademic-8a6d3",
+        storageBucket: "itacademic-8a6d3.appspot.com",
+        messagingSenderId: "843006698681",
+        appId: "1:843006698681:web:36cb355ec1a55ee2eda768",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // make auth and firestore references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const functions = firebase.functions();
+      // update firestore settings
+      db.settings({ timestampsInSnapshots: true });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".carousel").carousel({ dist: 0 });
+        window.setInterval(function () {
+          $(".carousel").carousel("next");
+        }, 4000);
+      });
+    </script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
